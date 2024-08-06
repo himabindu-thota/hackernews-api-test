@@ -1,0 +1,33 @@
+(bindu_take_home) MacBook-Pro hackernews-api-test % pytest test_hn_app.py -s -v
+============================================== test session starts ==============================================
+platform darwin -- Python 3.12.4, pytest-7.4.4, pluggy-1.0.0 -- /opt/anaconda3/envs/bindu_take_home/bin/python
+cachedir: .pytest_cache
+rootdir: /my_repo/hackernews-api-test
+configfile: pytest.ini
+collected 19 items
+
+test_hn_app.py::test_api_reachable PASSED
+test_hn_app.py::test_get_top_stories_status_code_200 PASSED
+test_hn_app.py::test_get_top_stories_count_500 PASSED
+test_hn_app.py::test_get_current_top_story_status_code_200 PASSED
+test_hn_app.py::test_get_current_top_story_comments_field PASSED
+test_hn_app.py::test_required_field_id PASSED
+test_hn_app.py::test_type_field_story PASSED
+test_hn_app.py::test_story_by_field_present PASSED
+test_hn_app.py::test_story_by_field_not_empty PASSED
+test_hn_app.py::test_get_story_with_non_integer_story_id_status_code_400_1 XFAIL
+test_hn_app.py::test_get_story_with_non_integer_story_id_1 XFAIL
+test_hn_app.py::test_get_story_with_non_integer_item_id_status_code_400_2 XFAIL
+test_hn_app.py::test_get_story_with_non_integer_item_id_2 XFAIL
+test_hn_app.py::test_comment_should_have_a_parent PASSED
+test_hn_app.py::test_comment_should_have_a_text PASSED
+test_hn_app.py::test_comment_should_have_type_comment PASSED
+test_hn_app.py::test_comment_by_field_present PASSED
+test_hn_app.py::test_comment_by_field_not_empty PASSED
+test_hn_app.py::test_get_all_top_stories_and_iterate
+
+ *** NOTE: This test takes about 2 mins to complete. To skip next time use -m "not burst" flag
+PASSED
+
+=================================== 15 passed, 4 xfailed in 88.30s (0:01:28) ====================================
+(bindu_take_home) MacBook-Pro hackernews-api-test %
